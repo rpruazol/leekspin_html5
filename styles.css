@@ -1,4 +1,6 @@
 #wrapper, img {
+    position: fixed;
+    top: 20px;
     width: 100%;
     height: 100%;
     height: 97vh;
@@ -14,7 +16,10 @@
 input {
     background-color: black;
     position: fixed;
-    top: 8px;
+    top: 20px;
+    height: 50px;
+    width: 50px;
+    font-size: 25px;
 }
 
 #counter {
