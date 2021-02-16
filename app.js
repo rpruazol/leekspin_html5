@@ -2,6 +2,8 @@
 
 var time
 var output
+var button = document.getElementById("play-button")
+button.addEventListener("click", play);
 
 function Init(){
     time = 1;
@@ -39,6 +41,17 @@ function StartTimer(){
     convertOutput();
     document.getElementById("time").innerHTML = output;
     self.setTimeout("StartTimer()", 1000);
+}
+
+function play() {
+    var myAudio = document.getElementById("audioval");
+    if(myAudio.paused) {
+        myAudio.play();
+        button.setAttribute("value", "🔈");
+    } else {
+        myAudio.pause();
+        button.setAttribute("value", "🔇");
+    }
 }
 
 Init();
